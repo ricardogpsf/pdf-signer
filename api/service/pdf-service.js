@@ -15,7 +15,7 @@ const sign = async ( pdf, p12, password ) => {
     RequestValidator.isNotNull('p12', p12);
     RequestValidator.isNotNull('password', password);
     
-    const tmpPdfFolder = path.join(__dirname, '../../', 'tmp', uuidv4());
+    const tmpPdfFolder = path.join(__dirname, '../../', '/tmp/', uuidv4());
     const pdfFileName = path.join(tmpPdfFolder, 'demo.pdf');
     const pdfSignedFileName = path.join(tmpPdfFolder, 'demo_signed.pdf');
     const p12Filename = path.join(tmpPdfFolder, 'cert.p12');
